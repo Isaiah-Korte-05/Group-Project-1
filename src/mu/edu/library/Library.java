@@ -25,9 +25,25 @@ public class Library {
 		
 	}
 	
+	/**
+	 * This removes a book from the array given that it exists
+	 * 
+	 * @param book
+	 * 		  This is the book to be removed
+	 * @return
+	 * 		  Returns true if book is found and successfully removed.
+	 * 		  Returns false if book is not found and nothing is removed.
+	 */
 	public boolean removeBook(Book book) {
 		
-		return true;
+		for (int i = 0; i < this.count; i++) {
+			if(this.books[i].equals(book)) {
+				this.books[i] = null;
+				return true;
+			}
+		}
+		
+		return false;
 		
 	}
 	
