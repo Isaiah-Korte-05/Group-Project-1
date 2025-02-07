@@ -31,7 +31,6 @@ public class Book {
 	 * 		  This parameter takes a double for the Book price.
 	 */
 	public Book(String title, String author, String iSBN, double price) {
-		super();
 		this.title = title;
 		this.author = author;
 		this.ISBN = iSBN;
