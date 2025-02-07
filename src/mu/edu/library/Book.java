@@ -7,6 +7,10 @@ public class Book {
 	private String ISBN;
 	private double price;
 	
+	/**
+	 * This is a default constructor that initializes the title, author, and ISBN to
+	 * "Unknown" and initializes price to 0.0. No parameters.
+	 */
 	public Book() {
 		this.title = "Unknown";
 		this.author = "Unknown";
@@ -14,11 +18,23 @@ public class Book {
 		this.price = 0.0;
 	}
 	
-	public Book(String title, String author, String iSBN, double price) {
+	/**
+	 * This is a parameterized constructor that sets all attributes.
+	 * 
+	 * @param title
+	 * 		  This parameter takes a string for the book title.
+	 * @param author
+	 * 		  This parameter takes a string for the book author.
+	 * @param ISBN
+	 * 		  This parameter takes a string for the book ISBN.
+	 * @param price
+	 * 		  This parameter takes a double for the book price.
+	 */
+	public Book(String title, String author, String ISBN, double price) {
 		super();
 		this.title = title;
 		this.author = author;
-		this.ISBN = iSBN;
+		this.ISBN = ISBN;
 		this.price = price;
 	}
 
