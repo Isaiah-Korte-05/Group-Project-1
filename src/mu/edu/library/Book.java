@@ -22,24 +22,24 @@ public class Book {
 	 * This is a parameterized constructor that sets all attributes.
 	 * 
 	 * @param title
-	 * 		  This parameter takes a string for the book title.
+	 * 		  This parameter takes a string for the Book title.
 	 * @param author
-	 * 		  This parameter takes a string for the book author.
-	 * @param ISBN
-	 * 		  This parameter takes a string for the book ISBN.
+	 * 		  This parameter takes a string for the Book author.
+	 * @param iSBN
+	 * 		  This parameter takes a string for the Book ISBN.
 	 * @param price
-	 * 		  This parameter takes a double for the book price.
+	 * 		  This parameter takes a double for the Book price.
 	 */
-	public Book(String title, String author, String ISBN, double price) {
+	public Book(String title, String author, String iSBN, double price) {
 		super();
 		this.title = title;
 		this.author = author;
-		this.ISBN = ISBN;
+		this.ISBN = iSBN;
 		this.price = price;
 	}
 	
 	/**
-	 * This is a copy constructor that creates a new Book object from another Book
+	 * This is a copy constructor that creates a new Book object from another Book.
 	 * 
 	 * @param book
 	 * 		  This parameter takes a Book object with attributes to be copied.
@@ -50,7 +50,7 @@ public class Book {
 		this.ISBN = book.ISBN;
 		this.price = book.price;
 	}
-
+	
 	public String getTitle() {
 		return title;
 	}
@@ -83,11 +83,24 @@ public class Book {
 		this.price = price;
 	}
 	
+	/**
+	 * This prints a string representation of the Book
+	 */
 	@Override
 	public String toString() {
 		return ("Title: " + title + "\nAuthor: " + author + "\nISBN: " + ISBN + "\nPrice: $" + price + "\n");
 	}
 	
+	/**
+	 * This compares the ISBN attribute of two Book objects
+	 * to evaluate if they are equal.
+	 * 
+	 * @param other
+	 * 		  This parameter is the Book object with ISBN attribute to be compared.
+	 * @return
+	 * 		  Returns true if two books have the same ISBN.
+	 * 		  Returns false otherwise.
+	 */
 	public boolean equals(Book other) {
 
 		if(this.ISBN.equals(other.getISBN())) {
