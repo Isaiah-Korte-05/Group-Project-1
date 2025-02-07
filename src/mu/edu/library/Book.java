@@ -50,34 +50,82 @@ public class Book {
 		this.price = book.price;
 	}
 	
+	/**
+	 * This is a getter.
+	 * 
+	 * @return
+	 * 		  Returns Book title.
+	 */
 	public String getTitle() {
 		return title;
 	}
-
+	
+	/**
+	 * This is a setter.
+	 * 
+	 * @param title
+	 * 		  takes a string to be set as Book title.
+	 */
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
+	/**
+	 * This is a getter.
+	 * 
+	 * @return
+	 * 		  Returns Book author.
+	 */
 	public String getAuthor() {
 		return author;
 	}
-
+	
+	/**
+	 * This is a setter.
+	 * 
+	 * @param title
+	 * 		  takes a string to be set as Book author.
+	 */
 	public void setAuthor(String author) {
 		this.author = author;
 	}
 
+	/**
+	 * This is a getter.
+	 * 
+	 * @return
+	 * 		  Returns Book ISBN.
+	 */
 	public String getISBN() {
 		return ISBN;
 	}
 
+	/**
+	 * This is a setter.
+	 * 
+	 * @param title
+	 * 		  takes a string to be set as Book ISBN.
+	 */
 	public void setISBN(String iSBN) {
 		this.ISBN = iSBN;
 	}
 
+	/**
+	 * This is a getter.
+	 * 
+	 * @return
+	 * 		  Returns Book price.
+	 */
 	public double getPrice() {
 		return price;
 	}
 
+	/**
+	 * This is a setter.
+	 * 
+	 * @param title
+	 * 		  takes a double to be set as Book price.
+	 */
 	public void setPrice(double price) {
 		this.price = price;
 	}
