@@ -37,9 +37,18 @@ public class Book {
 		this.ISBN = ISBN;
 		this.price = price;
 	}
-
-	public Book(Object book) {
-		
+	
+	/**
+	 * This is a copy constructor that creates a new Book object from another Book
+	 * 
+	 * @param book
+	 * 		  This parameter takes a Book object with attributes to be copied.
+	 */
+	public Book(Book book) {
+		this.title = book.title;
+		this.author = book.author;
+		this.ISBN = book.ISBN;
+		this.price = book.price;
 	}
 
 	public String getTitle() {
