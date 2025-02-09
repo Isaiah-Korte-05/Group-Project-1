@@ -2,7 +2,9 @@ package mu.edu.library;
 
 public class Library {
 
+	// Book array to act as 'library'
 	private Book[] books = new Book[5];
+	// Number of occupied spots of library
 	private int count = 0;
 	
 	/**
@@ -15,7 +17,8 @@ public class Library {
 	 * 		  Returns false if there is no space in array and Book is not added.
 	 */
 	public boolean addBook(Book book) {
-		
+
+		// Iterates through library, if space is found, adds books and updates count
 		if(this.count < books.length - 1) {
 			books[count] = book;
 			count++;
@@ -37,7 +40,9 @@ public class Library {
 	public boolean removeBook(Book book) {
 		
 		for (int i = 0; i < books.length; i++) {
+			// Tests if current book in library matches book parameter
 			if(this.books[i].equals(book)) {
+				// Erases found book
 				this.books[i] = null;
 				return true;
 			}
@@ -57,8 +62,9 @@ public class Library {
 	 * 		  Returns null if not found.
 	 */
 	public Book searchByISBN(String ISBN) {
-		
-		for(int i = 0; i < count - 1; i++) {
+
+		// Iterates through library and checks if each book has same ISBN as the parameter
+		for(int i = 0; books[i] != null; i++) {
 			if(ISBN == books[i].getISBN()) {
 				return books[i];
 			}
@@ -72,7 +78,8 @@ public class Library {
 	 */
 	public void displayBooks() {
 		
-		for(int i = 0; i < count - 1; i++) {
+		for(int i = 0; books[i] != null; i++) {
+			// Calls toString() function to get string data of each book
 			System.out.println(books[i].toString());
 		}
 		
