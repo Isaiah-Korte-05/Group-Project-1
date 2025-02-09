@@ -36,7 +36,7 @@ public class Library {
 	 */
 	public boolean removeBook(Book book) {
 		
-		for (int i = 0; i < this.count; i++) {
+		for (int i = 0; i < books.length; i++) {
 			if(this.books[i].equals(book)) {
 				this.books[i] = null;
 				return true;
