@@ -2,9 +2,13 @@ package mu.edu.library;
 
 public class Book {
 
+	// Title of book
 	private String title;
+	// Author of book (first and last name)
 	private String author;
+	// ISBN unique identifier
 	private String ISBN;
+	// Price of book in XX.XX format
 	private double price;
 	
 	/**
@@ -64,7 +68,7 @@ public class Book {
 	 * This is a setter.
 	 * 
 	 * @param title
-	 * 		  takes a string to be set as Book title.
+	 * 		  Takes a string to be set as Book title.
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -84,7 +88,7 @@ public class Book {
 	 * This is a setter.
 	 * 
 	 * @param title
-	 * 		  takes a string to be set as Book author.
+	 * 		  Takes a string to be set as Book author.
 	 */
 	public void setAuthor(String author) {
 		this.author = author;
@@ -104,7 +108,7 @@ public class Book {
 	 * This is a setter.
 	 * 
 	 * @param title
-	 * 		  takes a string to be set as Book ISBN.
+	 * 		  Takes a string to be set as Book ISBN.
 	 */
 	public void setISBN(String iSBN) {
 		this.ISBN = iSBN;
@@ -124,7 +128,7 @@ public class Book {
 	 * This is a setter.
 	 * 
 	 * @param title
-	 * 		  takes a double to be set as Book price.
+	 * 		  Takes a double to be set as Book price.
 	 */
 	public void setPrice(double price) {
 		this.price = price;
