@@ -84,8 +84,9 @@ public class Library {
 		
 		for(int i = 0; i < count; i++) {
 			// Calls toString() function to get string data of each book
-			System.out.println(books[i].toString());
+			System.out.println((i+1) + ". " + books[i].toString());
 		}
+		System.out.println("\n");
 		
 	}
 	
