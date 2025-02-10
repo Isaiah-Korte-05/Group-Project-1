@@ -18,7 +18,7 @@ public class Library {
 	 */
 	public boolean addBook(Book book) {
 
-		// Iterates through library, if space is found, adds books and updates count
+		// Iterates through library; if space is found, adds books and updates count
 		if(this.count < books.length - 1) {
 			books[count] = book;
 			count++;
@@ -39,11 +39,15 @@ public class Library {
 	 */
 	public boolean removeBook(Book book) {
 		
-		for (int i = 0; i < books.length; i++) {
-			// Tests if current book in library matches book parameter
+		// Iterates through library and compares the ISBN of each book with that of the book parameter
+		for(int i = 0; this.books[i] != null; i++) {
 			if(this.books[i].equals(book)) {
-				// Erases found book
-				this.books[i] = null;
+				// Iterates through rest of library and shifts each book to the left one
+				for(int j = i; this.books[j] != null; j++) {
+					this.books[j] = this.books[j+1];
+				}
+				// Updates count variable
+				count--;
 				return true;
 			}
 		}
@@ -64,7 +68,7 @@ public class Library {
 	public Book searchByISBN(String ISBN) {
 
 		// Iterates through library and checks if each book has same ISBN as the parameter
-		for(int i = 0; books[i] != null; i++) {
+		for(int i = 0; i < count; i++) {
 			if(ISBN == books[i].getISBN()) {
 				return books[i];
 			}
@@ -78,7 +82,7 @@ public class Library {
 	 */
 	public void displayBooks() {
 		
-		for(int i = 0; books[i] != null; i++) {
+		for(int i = 0; i < count; i++) {
 			// Calls toString() function to get string data of each book
 			System.out.println(books[i].toString());
 		}
