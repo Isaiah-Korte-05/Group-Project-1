@@ -139,7 +139,7 @@ public class Book {
 	 */
 	@Override
 	public String toString() {
-		return ("Title: " + title + "\nAuthor: " + author + "\nISBN: " + ISBN + "\nPrice: $" + price + "\n");
+		return (title + " by " + author + " (ISBN: " + ISBN + ", $" + price + ")");
 	}
 	
 	/**
