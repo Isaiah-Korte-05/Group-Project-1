@@ -42,16 +42,16 @@ public class Book {
 	}
 	
 	/**
-	 * This is a copy constructor that creates a new Book object from another Book.
+	 * This is a copy constructor that creates a new Book object from the attributes of another Book.
 	 * 
 	 * @param book
 	 * 		  This parameter takes a Book object with attributes to be copied.
 	 */
 	public Book(Book book) {
-		this.title = book.title;
-		this.author = book.author;
-		this.ISBN = book.ISBN;
-		this.price = book.price;
+		this.title = book.getTitle();
+		this.author = book.getAuthor();
+		this.ISBN = book.getISBN();
+		this.price = book.getPrice();
 	}
 	
 	/**
