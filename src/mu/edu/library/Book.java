@@ -147,14 +147,17 @@ public class Book {
 	 * to evaluate if they are equal.
 	 * 
 	 * @param other
-	 * 		  This parameter is the Book object with ISBN attribute to be compared.
+	 * 		  This parameter is an object with ISBN attribute to be compared.
 	 * @return
 	 * 		  Returns true if two books have the same ISBN.
 	 * 		  Returns false otherwise.
 	 */
-	public boolean equals(Book other) {
+	public boolean equals(Object other) {
 
-		if(this.ISBN.equals(other.getISBN())) {
+		// Casts parameter object to type Book
+		Book compBook = (Book)other;
+		// Compares the ISBN of parameter to this book
+		if(this.ISBN.equals(compBook.getISBN())) {
 			return true;
 		}
 		return false;
