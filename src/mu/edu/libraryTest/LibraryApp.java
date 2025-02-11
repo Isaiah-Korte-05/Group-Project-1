@@ -52,7 +52,7 @@ public class LibraryApp {
 		}
 
 		// Prints updated library after all additions and deletions
-		System.out.println("---Current Library---\n");
+		System.out.println("---Current Library---");
 		library.displayBooks();
 
 		System.out.println("Removing book: " + found.toString() + "\n");
